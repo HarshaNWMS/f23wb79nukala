@@ -2,10 +2,8 @@
 pug repository
 [my render](https://f23wb79nukala.onrender.com)
 
-
-For this project, we've chosen a class of items (e.g., "Items") with the following attributes:
-
-- `itemName` (string): The name of the item.
-- `category` (string): The category or type of the item.
-- `price` (number): The price of the item.
-
+This is manikanta
+myclass= tiger my attributes are
+tiger_color:(String) 
+tiger_breed:(String) 
+tiger_price:(Number)

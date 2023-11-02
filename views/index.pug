@@ -3,9 +3,8 @@ extends layout
 block content
   h1= title
   p Hello to #{title}
-  button(type="button", class="btn btn-secondary", onclick="goFaster()") Press Me
-  div(id="faster") Increase the speed 
-
+  button(type="button", class="btn btn-warning", onclick="goFaster()") Press Me
+  div#faster Increase the speed
   script.
     var mph = 20;
     var change = 1;
@@ -13,5 +12,5 @@ block content
     function goFaster() {
       mph += change;
       change += 1;
-      document.getElementById('faster').innerText = `MPH ${mph} with change ${change}`;
+      document.getElementById("faster").textContent = "MPH " + mph + " with change " + change;
     }

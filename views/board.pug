@@ -1,0 +1,28 @@
+extends layout
+block content
+    h1= title
+    p Number of rows:#{query.rows}
+    p Number of columns:#{query.cols}
+    - let rows=Number(query.rows)
+    - let cols=Number(query.cols)
+    if !(Number.isInteger(rows)) ||  !(Number.isInteger(rows))
+        p Given values are not integers A
+    else if( (rows < 1)&&(rows>10))
+        p Number of rows should be less than 4
+    else if(cols <1 && cols>10)
+        p Number of columns should be less than 5
+    else
+        table#outer
+         - for(let i=0; i<query.rows; i++) {
+            tr#middle
+            - for(let j=0; j<query.cols; j++) {
+                if(i==j)
+                 td 1
+                else if(i==j+1)
+                 td 2
+                else if(i==j-1)
+                 td #{i}
+                else
+                 td 0
+            -}
+         -}
